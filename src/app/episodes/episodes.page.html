@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+  
+    </ion-buttons>
+    <ion-title>
+      Capitulos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let episode of episodes">
+    <ion-item (click)="goepisode(episode.id)">
+      <ion-label>
+        <h2>{{ episode.id  }}</h2>
+        <h2>{{ episode.name  }}</h2>
+        <h2><b>Air date</b>{{ episode.air_date }}</h2>
+        <h2>{{ episode.director  }}</h2>
+        <h2>{{ episode.writer  }}</h2>
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+ 
+ 
+
+</ion-content>

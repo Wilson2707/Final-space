@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+  
+    </ion-buttons>
+    <ion-title>
+     LOCATIONS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let location of locations">
+    <ion-item (click)="golocation(location.id)">
+      <ion-label>
+        <h2>{{ location.name }}</h2>
+        <h2>{{ location.type }}</h2>
+        <h2>{{ location.inhabitanst }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+ 
+ 
+
+</ion-content>

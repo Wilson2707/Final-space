@@ -1,0 +1,33 @@
+
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+  
+    </ion-buttons>
+    <ion-title>{{ character?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+ 
+  <ion-item>
+    <img [src]="character?.img_url">
+  </ion-item>
+
+  <ion-label>
+        <h4><b> </b>{{ character?.id }}</h4>
+        <h4><b></b>{{ character?.name }}</h4>
+        <h4><b></b>{{character?.origin}}</h4>
+        <h4><b></b>{{ character?.status }}</h4>
+        <h4><b></b>{{ character?.hair}}</h4>
+        <h4><b></b>{{ character?.alias}}</h4>
+        <h4><b></b>{{ character?.abilities}}</h4>
+     </ion-label>
+  
+</ion-list>
+
+</ion-content>
+
+

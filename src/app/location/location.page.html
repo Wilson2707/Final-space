@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+  
+    </ion-buttons>
+    <ion-title>
+      Location
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="spinner" *ngIf="!loadReady">
+    <ion-spinner></ion-spinner>
+  </div>
+
+<div  *ngIf="loadReady">
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>{{location.type}}</ion-card-subtitle>
+    <ion-card-title> {{location.name}}</ion-card-title>
+  
+   
+  </ion-card-header>
+
+  <ion-card-content>
+    <b></b>
+    {{location.inhabitants}}
+  </ion-card-content>
+</ion-card>
+
+
+<h3 class="ion-margin">Residents</h3>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="6" *ngFor="let character of location.residents">
+      <ion-card (click)="goCharacter(character.id)">
+        <img [src]="character.img_url" />
+        <ion-card-header>
+          <ion-card-subtitle>{{character.name}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+
+</ion-content>

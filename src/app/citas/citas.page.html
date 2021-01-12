@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+  
+    </ion-buttons>
+    <ion-title>
+      CITAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-list *ngFor="let cita of citas">
+        <ion-item >
+          <ion-avatar slot="start">
+            <img [src]="cita.image">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ cita.quote }}</h2>
+            <h3>{{ cita.by }}</h3>
+
+          </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
